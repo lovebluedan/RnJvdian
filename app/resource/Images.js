@@ -22,5 +22,26 @@ export default {
         ic_myself_off:require('./img/icon_nav_me_white_normal.png'),
         ic_myself_on:require('./img/icon_nav_me_white_press.png'),
     },
+    My :{
+        ic_rebate_tag_normal:require('./img/icon_rebate_tag_normal.png'),
+        ic_spend_tag_normal:require('./img/icon_spend_tag_normal.png'),
+        ic_recommend_tag_normal:require('./img/icon_recommend_tag_normal.png'),
+        ic_party_tag_normal:require('./img/icon_party_tag_normal.png'),
+        ic_search_tag_normal:require('./img/icon_searchf_tag_normal.png'),
+        ic_follow_tag_normal:require('./img/icon_follow_tag_normal.png'),
+        ic_followf_tag_normal:require('./img/icon_followf_tag_normal.png'),
+        ic_wallet_tag_normal:require('./img/icon_wallet_tag_normal.png'),
+        ic_set_gift:require('./img/icon_set_gift.png'),
+        ic_indicator_arrow:require('./img/general_icon_indicator_arrow.png'),
+
+    },
+    sex :{
+        ic_female:require('./img/icon_female.png'),
+        ic_male:require('./img/icon_male.png'),
+    },
+    test:{
+        text:require('./img/2.jpg'),
+    }
+
 
 }

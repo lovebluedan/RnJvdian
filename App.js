@@ -12,11 +12,19 @@ import {
     Platform,
     StyleSheet,
     Text,
-    View
+    View,
+    Dimensions,
 } from 'react-native';
 import Images from "./app/resource/Images";
+import HeaderItem from "./app/components/HeaderItem";
+import Myself from "./app/actions/Myself";
+import Message from "./app/actions/Message";
+import Home from "./app/actions/Home";
+
+
 
 export default class App extends Component<{}> {
+
 
     constructor(props) {
         super(props);
@@ -83,29 +91,11 @@ export default class App extends Component<{}> {
                 </TabNavigator.Item>
             </TabNavigator>
 
-            /**
-             * <View style={styles.container}>
-             <Text style={styles.welcome}>
-             Welcome to React Native!
-             </Text>
-             </View>
-             */
         );
     }
 }
 
 
-class Home extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Home
-                </Text>
-            </View>
-        )
-    }
-}
 
 
 class News extends Component {
@@ -113,8 +103,9 @@ class News extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
-                    动态
+
                 </Text>
+
             </View>
         )
     }
@@ -132,36 +123,40 @@ class Add extends Component {
     }
 }
 
-class Message extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    消息
-                </Text>
-            </View>
-        )
-    }
-}
 
-class Myself extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    我的
-                </Text>
-            </View>
-        )
-    }
-}
+// class Myself extends Component {
+//     render() {
+//         return (
+//             <View style={styles.container}>
+//                 <HeaderItem/>
+//                 <View style={styles.smallView}/>
+//                 <MySelfItem/>
+//                 <MySelfItem/>
+//                 <View style={styles.smallView}/>
+//                 <MySelfItem/>
+//                 <MySelfItem/>
+//                 <MySelfItem/>
+//                 <MySelfItem/>
+//             </View>
+//         )
+//     }
+// }
 
-
+let {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
+
+    smallView : {
+        width,
+        height:12,
+        backgroundColor:'#F5F5F5',
+        paddingLeft:32
+    },
+
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        flexDirection:'column',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
         backgroundColor: '#F5FCFF',
     },
     welcome: {
